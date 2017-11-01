@@ -1,0 +1,7 @@
+C:\Imagination\NeuronDotNet Source\Core\bin\Release\NeuronDotNet.Core.xml
+C:\Imagination\NeuronDotNet Source\Core\bin\Release\NeuronDotNet.Core.dll
+C:\Imagination\NeuronDotNet Source\Core\bin\Release\NeuronDotNet.Core.pdb
+C:\Imagination\NeuronDotNet Source\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Imagination\NeuronDotNet Source\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Imagination\NeuronDotNet Source\Core\obj\Release\NeuronDotNet.Core.dll
+C:\Imagination\NeuronDotNet Source\Core\obj\Release\NeuronDotNet.Core.pdb

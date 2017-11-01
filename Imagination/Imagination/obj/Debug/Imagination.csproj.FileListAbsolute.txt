@@ -1,0 +1,15 @@
+C:\Imagination\Imagination\Imagination\bin\Debug\Imagination.exe.config
+C:\Imagination\Imagination\Imagination\bin\Debug\Imagination.exe
+C:\Imagination\Imagination\Imagination\bin\Debug\Imagination.pdb
+C:\Imagination\Imagination\Imagination\bin\Debug\ImagineLib.dll
+C:\Imagination\Imagination\Imagination\bin\Debug\NeuronDotNet.Core.dll
+C:\Imagination\Imagination\Imagination\bin\Debug\ImagineLib.pdb
+C:\Imagination\Imagination\Imagination\bin\Debug\NeuronDotNet.Core.pdb
+C:\Imagination\Imagination\Imagination\bin\Debug\NeuronDotNet.Core.xml
+C:\Imagination\Imagination\Imagination\obj\Debug\Imagination.csprojResolveAssemblyReference.cache
+C:\Imagination\Imagination\Imagination\obj\Debug\Imagination.Form1.resources
+C:\Imagination\Imagination\Imagination\obj\Debug\Imagination.Properties.Resources.resources
+C:\Imagination\Imagination\Imagination\obj\Debug\Imagination.csproj.GenerateResource.Cache
+C:\Imagination\Imagination\Imagination\obj\Debug\Imagination.csproj.CoreCompileInputs.cache
+C:\Imagination\Imagination\Imagination\obj\Debug\Imagination.exe
+C:\Imagination\Imagination\Imagination\obj\Debug\Imagination.pdb
