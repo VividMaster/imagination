@@ -117,14 +117,14 @@ namespace Imagination
         public int LInputs = 4;
         private void button2_Click(object sender, EventArgs e)
         {
-            IE = new Imagine(IW, IH, 4);
+            IE = new Imagine(IW, IH, 1);
             foreach(var ik in IPath.Keys)
             {
                 var i = IPath[ik];
                 IE.Imgs.Add(i);
             }
             Console.WriteLine("Training:" + IE.Imgs.Count + " Images.");
-            IE.Train(100, 3, Environment.TickCount);
+            IE.Train(100, 10, Environment.TickCount);
             Console.WriteLine("Trained.");
         }
         public Imagined ImgO = null;
