@@ -13,8 +13,8 @@ namespace ImagineLib
         private BackpropagationNetwork net;
         private double[] errorList;
         private int cycles = 5000;
-        private int neuronCount = 4;
-        private double learningRate = 0.05d;
+        private int neuronCount = 12;
+        private double learningRate = 0.02d;
         public List<Image> Imgs = new List<Image>();
         LinearLayer iLay;
         SigmoidLayer hLay;
@@ -42,7 +42,7 @@ namespace ImagineLib
         {
             if (seed == -1)
             {
-                seed = DateTime.Now.Millisecond;
+                seed = Environment.TickCount;
 
             }
             Random r = new Random(seed);
@@ -52,9 +52,10 @@ namespace ImagineLib
             {
                 double[] iv = new double[Inputs];
                 double[] ov = new double[W * H * 3];
-                for (int ic = 0; ic < Inputs; ic++)
+                for (int ic = 0; ic < Inputs; ic+=2)
                 {
                     iv[ic] = r.NextDouble();
+                    iv[ic + 1] = 1.0d - iv[ic];
                 }
                 for (int y = 0; y < i.H; y++)
                 {
@@ -88,7 +89,7 @@ namespace ImagineLib
         {
             if(seed==-1)
             {
-                seed = DateTime.Now.Millisecond;
+                seed = Environment.TickCount;
             }
             Random r = new Random(seed);
             double[] iv = new double[Inputs];
@@ -106,9 +107,9 @@ namespace ImagineLib
                     int l = (y * W * 3) + (x * 3);
                     // ni.Dat[l] = tb(ov[l]);
                     //ni.Dat[l+1] = tb(ov[l+1]));
-                    ni.Dat[l] = TB(ov[l]);
-                    ni.Dat[l + 1] = TB(ov[l + 1]);
-                    ni.Dat[l + 2] = TB(ov[l + 2]);
+                 //   ni.Dat[l] = TB(ov[l]);
+                //    ni.Dat[l + 1] = TB(ov[l + 1]);
+               //     ni.Dat[l + 2] = TB(ov[l + 2]);
                     System.Drawing.Color col = System.Drawing.Color.FromArgb(255, TB(ov[l]), TB(ov[l + 1]), TB(ov[l + 2]));
                         ni.BP.SetPixel(x, y, col);
                 }
@@ -135,7 +136,7 @@ namespace ImagineLib
 
         public double GV(byte v)
         {
-            return ((double)v) / 255.0f;
+            return ((double)v) / 255.0d;
         }
     }
 }

@@ -23,8 +23,8 @@ namespace Imagination
             IP = new ImagePreview();
             IP.Dock = DockStyle.Fill;
             ImgS.Panel1.Controls.Add(IP);
-            IW = 56;
-            IH = 56;
+            IW = 96;
+            IH = 96;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -117,14 +117,14 @@ namespace Imagination
         public int LInputs = 4;
         private void button2_Click(object sender, EventArgs e)
         {
-            IE = new Imagine(IW, IH, 1);
+            IE = new Imagine(IW, IH, 2);
             foreach(var ik in IPath.Keys)
             {
                 var i = IPath[ik];
                 IE.Imgs.Add(i);
             }
             Console.WriteLine("Training:" + IE.Imgs.Count + " Images.");
-            IE.Train(100, 10, Environment.TickCount);
+            IE.Train(30, 4, Environment.TickCount);
             Console.WriteLine("Trained.");
         }
         public Imagined ImgO = null;
