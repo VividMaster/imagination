@@ -1,0 +1,9 @@
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Release\ImagineLib.dll
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Release\ImagineLib.pdb
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Release\NeuronDotNet.Core.dll
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Release\NeuronDotNet.Core.pdb
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Release\NeuronDotNet.Core.xml
+C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Release\ImagineLib.csprojResolveAssemblyReference.cache
+C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Release\ImagineLib.csproj.CoreCompileInputs.cache
+C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Release\ImagineLib.dll
+C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Release\ImagineLib.pdb

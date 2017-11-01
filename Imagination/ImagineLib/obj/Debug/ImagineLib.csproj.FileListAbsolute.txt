@@ -7,3 +7,12 @@ C:\Imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.csprojResolveAssembly
 C:\Imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.csproj.CoreCompileInputs.cache
 C:\Imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.dll
 C:\Imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.pdb
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Debug\ImagineLib.dll
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Debug\ImagineLib.pdb
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Debug\NeuronDotNet.Core.dll
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Debug\NeuronDotNet.Core.pdb
+C:\dev2\imagination\imagination\Imagination\ImagineLib\bin\Debug\NeuronDotNet.Core.xml
+C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.csprojResolveAssemblyReference.cache
+C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.csproj.CoreCompileInputs.cache
+C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.dll
+C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.pdb
