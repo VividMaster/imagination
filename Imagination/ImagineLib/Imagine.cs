@@ -13,25 +13,26 @@ namespace ImagineLib
         private BackpropagationNetwork net;
         private double[] errorList;
         private int cycles = 5000;
-        private int neuronCount = 12;
-        private double learningRate = 0.02d;
-        public List<Image> Imgs = new List<Image>();
+        private int neuronCount = 8;
+        private double learningRate = 0.62d;
+        public List<Image> InImgs = new List<Image>();
+        public List<Image> OutImgs = new List<Image>();
         LinearLayer iLay;
         SigmoidLayer hLay;
         SigmoidLayer oLay;
         public int Inputs;
         public int W, H;
         public BackpropagationConnector c1, c2;
-        public Imagine(int w, int h, int inputs = 4)
+        public Imagine(int w, int h)
         {
             W = w;
             H = h;
-            Inputs = inputs;
+            Inputs = W * H * 3;
             iLay = new LinearLayer(Inputs);
             hLay = new SigmoidLayer(neuronCount);
             oLay = new SigmoidLayer(w * h * 3);
-            c1 = new BackpropagationConnector(iLay, hLay);
-            c2 = new BackpropagationConnector(hLay, oLay);
+            c1 = new BackpropagationConnector(iLay, hLay,ConnectionMode.OneOne);
+            c2 = new BackpropagationConnector(hLay, oLay,ConnectionMode.Complete);
             net = new BackpropagationNetwork(iLay, oLay);
             net.SetLearningRate(learningRate);
             
@@ -46,27 +47,40 @@ namespace ImagineLib
 
             }
             Random r = new Random(seed);
-
+            int ai = 0;
             TrainingSet ts = new TrainingSet(Inputs, W * H * 3);
-            foreach (var i in Imgs)
+            foreach (var i in InImgs)
             {
+
                 double[] iv = new double[Inputs];
                 double[] ov = new double[W * H * 3];
-                for (int ic = 0; ic < Inputs; ic+=2)
+               
+                int ic = 0;
+                for(int y =0; y < i.H; y++)
                 {
-                    iv[ic] = r.NextDouble();
-                    iv[ic + 1] = 1.0d - iv[ic];
+                    for(int x = 0; x < i.W; x++)
+                    {
+
+                        iv[ic] = GV(i.Dat[ic++]);
+                        iv[ic] = GV(i.Dat[ic++]);
+                        iv[ic] = GV(i.Dat[ic++]);
+                    }
                 }
+                Image oi = OutImgs[ai];
+                int vv = 0;
                 for (int y = 0; y < i.H; y++)
                 {
                     for (int x = 0; x < i.W; x++)
                     {
-                        int l = (i.H * y * 3) + (x * 3);
-                        ov[l] = GV(i.Dat[l++]);
-                        ov[l] = GV(i.Dat[l++]);
-                        ov[l] = GV(i.Dat[l++]);
+                        //int l = (i.H * y * 3) + (x * 3);
+                        ov[vv] = GV(i.Dat[vv++]);
+                        ov[vv] = GV(i.Dat[vv++]);
+                        ov[vv] = GV(i.Dat[vv++]);
                     }
                 }
+
+                ai++;
+
                 TrainingSample s = new TrainingSample(iv, ov);
                 for(int xc=0;xc<cpi;xc++)
                 {
@@ -78,25 +92,28 @@ namespace ImagineLib
             //{
             //            net.BeginEpochEvent += TrainE;
             net.EndEpochEvent += EndE;
-            
+
             net.Learn(ts, cs);
             net.StopLearning();
             Console.WriteLine("Done training mind.");    
             
         }
         public bool Ready = false;
-        public Image ImagineImage(int seed=-1)
+        public Image ImagineImage(Image from)
         {
-            if(seed==-1)
+
+            int il = 0;
+            //Random r = new Random(seed);
+            double[] iv = new double[from.W * from.H * 3];
+            for (int y = 0; y < from.H; y++)
             {
-                seed = Environment.TickCount;
-            }
-            Random r = new Random(seed);
-            double[] iv = new double[Inputs];
-            for(int i = 0; i < Inputs; i++)
-            {
-                iv[i] = r.NextDouble();
-                Console.WriteLine("TS:" + i + " V:" + iv[i]);
+                for(int x = 0; x < from.W; x++)
+                {
+                    iv[il] = GV(from.Dat[il++]);
+                    iv[il] = GV(from.Dat[il++]);
+                    iv[il] = GV(from.Dat[il++]);
+                    
+                }
             }
             Image ni = new Image(W, H);
             double[] ov = net.Run(iv);

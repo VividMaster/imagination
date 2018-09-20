@@ -29,6 +29,7 @@ namespace Imagination
             {
                 e.Graphics.DrawImage(Img, new Rectangle(0, 0, Width, Height));
             }
+            Img = null;
         }
     }
 }

@@ -16,3 +16,13 @@ C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.cspr
 C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.csproj.CoreCompileInputs.cache
 C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.dll
 C:\dev2\imagination\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.pdb
+C:\Dev\Git\imagination\Imagination\ImagineLib\bin\Debug\ImagineLib.dll
+C:\Dev\Git\imagination\Imagination\ImagineLib\bin\Debug\ImagineLib.pdb
+C:\Dev\Git\imagination\Imagination\ImagineLib\bin\Debug\NeuronDotNet.Core.dll
+C:\Dev\Git\imagination\Imagination\ImagineLib\bin\Debug\NeuronDotNet.Core.pdb
+C:\Dev\Git\imagination\Imagination\ImagineLib\bin\Debug\NeuronDotNet.Core.xml
+C:\Dev\Git\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.csprojAssemblyReference.cache
+C:\Dev\Git\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.csproj.CoreCompileInputs.cache
+C:\Dev\Git\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.csproj.CopyComplete
+C:\Dev\Git\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.dll
+C:\Dev\Git\imagination\Imagination\ImagineLib\obj\Debug\ImagineLib.pdb
