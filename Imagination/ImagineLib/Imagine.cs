@@ -14,7 +14,7 @@ namespace ImagineLib
         private double[] errorList;
         private int cycles = 5000;
         private int neuronCount = 8;
-        private double learningRate = 0.62d;
+        private double learningRate = 0.12d;
         public List<Image> InImgs = new List<Image>();
         public List<Image> OutImgs = new List<Image>();
         LinearLayer iLay;
@@ -31,7 +31,7 @@ namespace ImagineLib
             iLay = new LinearLayer(Inputs);
             hLay = new SigmoidLayer(neuronCount);
             oLay = new SigmoidLayer(w * h * 3);
-            c1 = new BackpropagationConnector(iLay, hLay,ConnectionMode.OneOne);
+            c1 = new BackpropagationConnector(iLay, hLay,ConnectionMode.Complete);
             c2 = new BackpropagationConnector(hLay, oLay,ConnectionMode.Complete);
             net = new BackpropagationNetwork(iLay, oLay);
             net.SetLearningRate(learningRate);
